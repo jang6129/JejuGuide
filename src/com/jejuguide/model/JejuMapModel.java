@@ -8,10 +8,10 @@ public class JejuMapModel {
 	public void setIndex(int index) {
 		this.index = index;
 	}
-	int captionX[] = {
-			317, 230, 370, 350
+	public int captionX[] = {
+			0, 230, 370, 350
 	};
-	int captionY[] = {
+	public int captionY[] = {
 			165, 300, 330, 250
 	};
 }

@@ -8,6 +8,6 @@ public class jejuGuide {
 		// Start Project
 		JejuMapModel jejuMapModel = new JejuMapModel();
 		Clicker clicker = new Clicker(jejuMapModel);
-		MainFrame mainFrame = new MainFrame(clicker);
+		MainFrame mainFrame = new MainFrame(clicker, jejuMapModel);
 	}
 }

@@ -1,5 +1,7 @@
 package com.jejuguide.view;
 
+import java.awt.BorderLayout;
+import java.awt.Container;
 import java.awt.Graphics;
 import java.awt.Image;
 
@@ -8,12 +10,17 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import com.jejuguide.controller.Clicker;
+import com.jejuguide.model.JejuMapModel;
 
 public class MainFrame extends JFrame {
-	public MainFrame(Clicker clicker) {
+	JejuMapModel model;
+	public MainFrame(Clicker clicker, JejuMapModel model) {
+		this.model = model;
 		addMouseListener(clicker);
 		JejuMapPanel jejuMapPanel = new JejuMapPanel();
-		setContentPane(jejuMapPanel);
+		Container contentPain = getContentPane();
+		
+		contentPain.add(jejuMapPanel, BorderLayout.CENTER);
 		setTitle("Jeju Guide");
 		setSize(797, 512);
 		setVisible(true);
@@ -29,7 +36,7 @@ public class MainFrame extends JFrame {
 
 		public void paint(Graphics g) {
 			g.drawImage(img, 0, 0, getWidth(), getHeight(), this);
-			g.fillOval(317, 165, 15, 15); // 제주특별자치도립미술관
+			g.fillOval(model.captionX[0], model.captionY[0], 15, 15); // 제주특별자치도립미술관
 			g.fillOval(230, 300, 15, 15); // 카멜리아힐
 			g.fillOval(370, 330, 15, 15); // 천지연폭포
 			g.fillOval(350, 250, 15, 15); // 한라산국립공원
