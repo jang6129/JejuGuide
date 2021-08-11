@@ -20,7 +20,6 @@ public class Landmark extends JFrame {
 		setSize(landmarkModel.PANEL_SIZE_X, landmarkModel.PANEL_SIZE_Y);
 		setVisible(true);
 		setResizable(false);
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 	}
 
 	class LandmarkPanel extends JPanel {
@@ -35,7 +34,6 @@ public class Landmark extends JFrame {
 
 		public void paint(Graphics g) {
 			g.drawImage(landmarkModel.getImage(index), 50, 150, 640, 360, this);
-			g.drawImage(landmarkModel.getHomeImage(), 1300, 700, 100, 100, this);
 			if (index == 0) {
 				g.setFont(new Font("default", Font.BOLD, 50));
 				g.drawString("제주도립미술관", 50, 95);

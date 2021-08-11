@@ -9,7 +9,7 @@ public class JejuMapModel {
 		this.index = index;
 	}
 	public int captionX[] = {
-			0, 230, 370, 350
+			317, 230, 370, 350
 	};
 	public int captionY[] = {
 			165, 300, 330, 250

@@ -15,11 +15,21 @@ import com.jejuguide.model.JejuMapModel;
 public class MainFrame extends JFrame {
 	JejuMapModel model;
 	public MainFrame(Clicker clicker, JejuMapModel model) {
+//		this.model = model;
+//		addMouseListener(clicker);
+//		JejuMapPanel jejuMapPanel = new JejuMapPanel();
+//		Container contentPain = getContentPane();
+//		
+//		contentPain.add(jejuMapPanel, BorderLayout.CENTER);
+//		setTitle("Jeju Guide");
+//		setSize(797, 512);
+//		setVisible(true);
+//		setResizable(false);
+//		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		this.model = model;
-		addMouseListener(clicker);
 		JejuMapPanel jejuMapPanel = new JejuMapPanel();
 		Container contentPain = getContentPane();
-		
+		contentPain.addMouseListener(clicker);
 		contentPain.add(jejuMapPanel, BorderLayout.CENTER);
 		setTitle("Jeju Guide");
 		setSize(797, 512);
